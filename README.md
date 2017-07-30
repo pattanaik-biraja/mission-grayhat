@@ -1,4 +1,4 @@
 mission-grayhat
 ===============
 
-Application as well as system level programming
+Java Enterprise Web Application devlopment
