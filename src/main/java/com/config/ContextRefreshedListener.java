@@ -1,4 +1,4 @@
-package org.sfg.blog.cntxref;
+/*package com.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -21,3 +21,4 @@ public class ContextRefreshedListener implements ApplicationListener<ContextRefr
         eventHolderBean.setEventFired(true);
     }
 }
+*/

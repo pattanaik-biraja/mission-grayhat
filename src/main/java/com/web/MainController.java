@@ -1,5 +1,7 @@
 package com.web;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,13 +34,17 @@ public class MainController {
         return "productform";
     }
     
-    @RequestMapping(value = "product", method = RequestMethod.POST)
+    @RequestMapping(value = "/product", method = RequestMethod.POST)
     public String saveProduct(Product product){
+    	if(product.getProductId()==null || "".equals(product.getProductId())){
+    		product.setProductId(UUID.randomUUID().toString());
+    	}
         productService.saveProduct(product);
-        return "redirect:/product/" + product.getId();
+        //return "redirect:/product/" + product.getId();
+        return "redirect:products";
     }
     
-    @RequestMapping("product/{id}")
+    @RequestMapping("product/show/{id}")
     public String showProduct(@PathVariable Integer id, Model model){
         model.addAttribute("product", productService.getProductById(id));
         return "productshow";

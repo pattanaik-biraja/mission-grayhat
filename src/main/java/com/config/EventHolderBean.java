@@ -1,4 +1,4 @@
-package org.sfg.blog.cntxref;
+/*package com.config;
 
 import org.springframework.stereotype.Component;
 
@@ -14,3 +14,4 @@ public class EventHolderBean {
         this.eventFired = eventFired;
     }
 }
+*/

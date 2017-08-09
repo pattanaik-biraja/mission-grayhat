@@ -1,4 +1,4 @@
-package org.sfg.blog.cntxref;
+package com.config;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
